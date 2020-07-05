@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Brainster</title>
-  <link rel = "icon" href ="./img/Brainster-Logo.png" type = "image/x-icon"> 
+  <link rel="icon" href="./img/Brainster-Logo.png" type="image/x-icon">
   <meta name="description" content="" />
-  <meta name="keywords" content="Brainster, Академија, Курсеви, Проекти, Маркетинг, Дизајн, Програмирање, Веб Девелопер, Македонија, Academy, Students, Codepreneurs, Data-Science, Design, Marketing, Web Development, Projects, Programming, Front-End Developer, Full-Stack Developer, Macedonia"/>
+  <meta name="keywords"
+    content="Brainster, Академија, Курсеви, Проекти, Маркетинг, Дизајн, Програмирање, Веб Девелопер, Македонија, Academy, Students, Codepreneurs, Data-Science, Design, Marketing, Web Development, Projects, Programming, Front-End Developer, Full-Stack Developer, Macedonia" />
   <meta name="author" content="Nikola Aksentijev, Front-End Developer" />
-  <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="https://kit.fontawesome.com/81427d3b0f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/105f150b86.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!-- NAVBAR -->
   <div class="navbar-brainster d-flex">
-    <!-- Desktop Navbar -->
+
     <div class="logo flex">
       <div>
         <a href="./index.html">
@@ -37,7 +37,6 @@
       </div>
       <a href="form.html" class="bold btn">Вработи наш студент</a>
     </div>
-    <!-- Tablet & Mobile Navbar -->
     <button class="openbtn" href="#" onclick="openNav()">
       <span class="bar bar-1"></span>
       <span class="bar bar-2"></span>
@@ -55,15 +54,13 @@
       <a href="form.html"><button class="sidebtn">Вработи наш студент</button></a>
     </div>
   </div>
-  <!-- END OF NAVBAR -->
-  <!-- SHOWCASE -->
+
   <div class="showcase">
     <div class="opacity flex">
       <h1 class="m-0 text-center bold">Brainster Labs</h1>
     </div>
   </div>
-  <!-- END OF SHOWCASE -->
-  <!-- FILTER NAVIGATION -->
+
   <div class="navigation d-flex" id="myBtnContainer">
     <a class="filters d-flex marketing" onclick="loadCategoryProjects('marketing')">
       <p class="m-0 bold">Проекти на студенти по акедмијата за маркетинг</p>
@@ -78,28 +75,30 @@
       <i class="fas fa-check-circle fa-2x circle"></i>
     </a>
   </div>
-  <!-- END OF FILTER NAVIGATION -->
-  <!-- PROJECTS -->
+
   <div class="projects">
     <h1 class="text-center bold">Проекти</h1>
-    
-      <div id="card-container">
-        <!-- All cards are loaded with JS -->
-      </div>
 
-      <div class="flex" id="load-buttons-container">
-        <button class="load" id="loadMore" onclick="loadMore()">
-          <span class="d-flex load-span"><i class="fas fa-angle-double-down bounce"></i> <p class="m-0">Повеќе</p></span>
-        </button>
+    <div id="card-container">
 
-        <button class="load" id="toTop">
-          <span class="d-flex load-span"><i class="fas fa-angle-double-up top-bounce"></i> <p class="m-0">Назад</p></span>
-        </button>
-      </div> 
-    
+    </div>
+
+    <div class="flex" id="load-buttons-container">
+      <button class="load" id="loadMore" onclick="loadMore()">
+        <span class="d-flex load-span"><i class="fas fa-angle-double-down bounce"></i>
+          <p class="m-0">Повеќе</p>
+        </span>
+      </button>
+
+      <button class="load" id="toTop">
+        <span class="d-flex load-span"><i class="fas fa-angle-double-up top-bounce"></i>
+          <p class="m-0">Назад</p>
+        </span>
+      </button>
+    </div>
+
   </div>
-  <!-- END OF PROJECTS -->
-  <!-- Footer -->
+
   <div class="footer">
     <p class="text-center m-0 bold">Издработено со <i class="fas fa-heart heart"></i> од студентите на Brainster</p>
   </div>

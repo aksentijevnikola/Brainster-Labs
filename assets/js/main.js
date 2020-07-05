@@ -1,5 +1,3 @@
-
-// SIDEBAR
 function openNav() {
   if (window.matchMedia("(max-width: 767px)").matches) {
     document.getElementById("brainster-sidebar").style.width = "100vw";
@@ -10,9 +8,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("brainster-sidebar").style.width = "0";
 }
-// END OF SIDEBAR
 
-// SELECT FORM
 $(document).ready(function () {
   $(".select").click(function () {
     $(".select-menu").toggleClass("showMenu");
@@ -21,21 +17,24 @@ $(document).ready(function () {
       $(".select-menu").removeClass("showMenu");
     });
   });
-});
-$(document).ready(function () {
   $(".select, .select-menu").click(function () {
     $(".select .fa-chevron-down").toggleClass("rotate180");
   });
+  $("#toTop").on('click', function (scroll) {
+    scroll.preventDefault();
+    $('body,html').animate(
+      { scrollTop: '0px' },
+      { duration: 850, easing: 'linear' })
+  });
 });
+
 $(document).mouseup(function (clickOutside) {
   var container = $(".select-menu, .select, .fa-chevron-down");
   if (!container.is(clickOutside.target) && container.has(clickOutside.target).length === 0) {
     container.removeClass("showMenu rotate180");
   }
 });
-// // // END OF SELECT FORM
 
-// // // FILTER + PAGINATION
 
 function designCard(index) {
   return `<div class="filterCard design-card">
@@ -99,12 +98,11 @@ const numOfDesignCards = 4;
 const numOfProgrammingCards = 10;
 let cardsLoaded = 0;
 const PAGE_SIZE = 6;
-
+window.onload = loadProjects();
 
 function loadProjects() {
   let cardContainer = document.getElementById('card-container');
   cardContainer.innerHTML = '';
-  console.log(cardContainer);
   loadMarketingCards(true);
   loadDesignCards(true);
   loadProgrammingCards(true);
@@ -115,7 +113,6 @@ function loadProjects() {
       cardElements[i].style.display = 'none'
     }
     cardsLoaded = 6;
-
 
     if (numOfDesignCards + numOfMarketingCards + numOfProgrammingCards < PAGE_SIZE) {
       document.getElementById('loadMore').style.display = 'none';
@@ -211,10 +208,9 @@ function loadCategoryProjects(category) {
   }
 }
 
-window.onload = loadProjects();
 
 let btnContainer = document.getElementById("myBtnContainer");
-let btns = btnContainer.getElementsByClassName(" filters");
+let btns = btnContainer.getElementsByClassName("filters");
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     let current = document.getElementsByClassName("active");
@@ -232,15 +228,3 @@ for (let i = 0; i < btns.length; i++) {
   });
 }
 
-// // // END OF FILTER + PAGINATION
-
-// // // TO-TOP BUTTON 
-
-$(document).ready(function () {
-  $("#toTop").on('click', function (scroll) {
-    scroll.preventDefault();
-    $('body,html').animate(
-      { scrollTop: '0px' },
-      { duration: 850, easing: 'linear' })
-  });
-});
