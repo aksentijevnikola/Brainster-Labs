@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brainster - Вработи Студент</title>
+    <link rel = "icon" href ="./img/Brainster-Logo.png" type = "image/x-icon">
+    <meta name="description" content="" />
+    <meta name="keywords" content="Brainster, Академија, Курсеви, Проекти, Маркетинг, Дизајн, Програмирање, Веб Девелопер, Македонија, Academy, Students, Codepreneurs, Data-Science, Design, Marketing, Web Development, Projects, Programming, Front-End Developer, Full-Stack Developer, Macedonia"/>
+    <meta name="author" content="Nikola Aksentijev, Front-End Developer" />
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/81427d3b0f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar-brainster d-flex">
+        <!-- Desktop Navbar -->
+        <div class="logo flex">
+            <div>
+                <a href="./index.html">
+                    <img src="./img/Brainster-Logo.png" alt="Brainster Logo" class="img-responsive">
+                </a>
+            </div>
+        </div>
+        <div class="nav-list flex">
+            <div class="flex m-0">
+                <a class="different bold" href="https://www.brainster.io/marketpreneurs" target="_blank">Академија за
+                    маркетинг</a>
+                <a class="different bold" href="http://codepreneurs.co/" target="_blank">Академија за програмирање</a>
+                <a class="different bold" href="https://www.brainster.io/data-science" target="_blank">Академија за data
+                    science</a>
+                <a class="different bold" href="https://www.brainster.io/design" target="_blank">Академија за дизајн</a>
+            </div>
+            <a href="form.html" class="bold btn">Вработи наш студент</a>
+        </div>
+        <!-- Tablet & Mobile Navbar -->
+        <button class="openbtn" href="#" onclick="openNav()">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+        </button>
+        <div id="brainster-sidebar" class="sidebar">
+            <button class="closebtn" href="#" onclick="closeNav()">
+                <span class="cross cross-1"></span>
+                <span class="cross cross-2"></span>
+            </button>
+            <a href="https://www.brainster.io/marketpreneurs" target="_blank">Академија за маркетинг</a>
+            <a href="http://codepreneurs.co/" target="_blank">Академија за програмирање</a>
+            <a href="https://www.brainster.io/data-science" target="_blank">Академија за data science</a>
+            <a href="https://www.brainster.io/design" target="_blank">Академија за дизајн</a>
+            <a href="form.html"><button class="sidebtn">Вработи наш студент</button></a>
+        </div>
+    </div>
+    <!-- END OF NAVBAR -->
+    <!-- FORM -->
+    <div class="container-fluid bg-form">
+        <div class="row brainster-form">
+            <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <h1 class="bold text-center">Вработи студенти</h1>
+                <div class="row form-height">
+                    <form>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label for="namesurname">Име и Презиме</label>
+                                <input type="text" id="name" class="form-control"
+                                    oninvalid="this.setCustomValidity('Ве молиме внесете го вашето име и презиме.');"
+                                    oninput="setCustomValidity('');" placeholder="Вашето име и презиме" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label for="company">Име на компанија</label>
+                                <input type="text" id="company" class="form-control"
+                                    oninvalid="this.setCustomValidity('Ве молиме внесете го името на вашата компанија.')"
+                                    oninput="setCustomValidity('')" placeholder="Име на вашата компанија" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label for="email">Контакт имејл</label>
+                                <input type="email" id="email" class="form-control"
+                                    oninvalid="this.setCustomValidity('Ве молиме внесете Е-маил адреса на вашата компанија.')"
+                                    oninput="setCustomValidity('')" placeholder="Контакт имејл на вашата компанија"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label for="contact-phone">Контакт телефон</label>
+                                <input type="text" id="phone" class="form-control"
+                                    oninvalid="this.setCustomValidity('Ве молиме внесете го вашиот контакт телефон на вашата компанија.')"
+                                    oninput="setCustomValidity('')" placeholder="Контакт телефон на вашата компанија"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label>Тип на студенти</label>
+                            <div class="select d-flex">
+                                <p class="m-0">Изберете тип на студент</p>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <ul class="select-menu list-unstyled">
+                                <li>Студенти од маркетинг</li>
+                                <li>Студенти од програмирање</li>
+                                <li>Студенти од data science</li>
+                                <li>Студенти од дизајн</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-button">
+                                <input type="submit" class="btn btn-block" value="ИСПРАТИ">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row footer">
+            <p class="text-center m-0 bold">Издработено со <i class="fas fa-heart heart"></i> од студентите на Brainster
+            </p>
+        </div>
+    </div>
+
+
+</body>
+<script src="./assets/js/jquery-3.4.1.min.js"></script>
+<script src="./assets/js/main.js"></script>
+
+</html>
